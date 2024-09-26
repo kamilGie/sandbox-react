@@ -1,9 +1,9 @@
-import ChempionGrid from "./chempionGrid";
+import ChempionsGrid from "./ChempionsGrid";
 
 function App() {
 	return (
 		<>
-			<ChempionGrid />
+			<ChempionsGrid />
 		</>
 	);
 }
