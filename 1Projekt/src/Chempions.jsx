@@ -7,7 +7,6 @@ function Chempions() {
 		width: "100vw",
 		gridTemplateColumns: "1fr 1fr", // Dwie kolumny o równej szerokości
 		gap: "10px",
-		padding: "10px"
 	}
 
 	return (<div style={chempionsStyle}>

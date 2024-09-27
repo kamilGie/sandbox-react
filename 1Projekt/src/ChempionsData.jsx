@@ -14,4 +14,11 @@ export const ChempionList = [
 	new Chempion("Darius", "jest totalnym koxem i wgl", DariusPhoto),
 	new Chempion("teemo", "jest juz takim chomikem slodkim", TeemoPhoto),
 	new Chempion("yasuo", "jest takim mistrzem spinjutsu", YasuoPhoto),
+	new Chempion("yasuo", "jest takim mistrzem spinjutsu", YasuoPhoto),
+	new Chempion("yasuo", "jest takim mistrzem spinjutsu", YasuoPhoto),
+	new Chempion("yasuo", "jest takim mistrzem spinjutsu", YasuoPhoto),
+	new Chempion("yasuo", "jest takim mistrzem spinjutsu", YasuoPhoto),
+	new Chempion("yasuo", "jest takim mistrzem spinjutsu", YasuoPhoto),
+	new Chempion("yasuo", "jest takim mistrzem spinjutsu", YasuoPhoto),
+	new Chempion("yasuo", "jest takim mistrzem spinjutsu", YasuoPhoto),
 ]
