@@ -1,5 +1,6 @@
 import ChempionInfoBox from "./ChempionInfoBox"
 import ChempionsGrid from "./ChempionsGrid"
+import { useState } from "react"
 
 function Chempions() {
 	const chempionsStyle = {
@@ -9,9 +10,15 @@ function Chempions() {
 		gap: "10px",
 	}
 
+	const [SelectedChempion, SetSelectedChempion] = useState(0)
+
+	function HandleClickedChempion(id) {
+		SetSelectedChempion(id)
+	}
+
 	return (<div style={chempionsStyle}>
-		<ChempionsGrid />
-		<ChempionInfoBox />
+		<ChempionsGrid func={HandleClickedChempion} />
+		<ChempionInfoBox selectedChempion={SelectedChempion} />
 	</div>)
 
 }
