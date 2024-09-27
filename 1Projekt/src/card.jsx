@@ -3,7 +3,7 @@ import UnkownChempPhoto from "./assets/none.jpg"
 
 
 function Card({ name = "unknow", desc = "jakis mistyzcny nwm kto", img = UnkownChempPhoto }) {
-	const wyswietlInfo = (e) => (e.currentTarget.style.display = "none");
+	const wyswietlInfo = () => (console.log("klik"));
 
 	return (
 		<div className="card" onClick={wyswietlInfo}>

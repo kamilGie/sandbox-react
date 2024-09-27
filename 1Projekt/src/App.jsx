@@ -1,9 +1,11 @@
-import ChempionsGrid from "./ChempionsGrid";
+import Header from "./Header"
+import Chempions from "./Chempions";
 
 function App() {
 	return (
 		<>
-			<ChempionsGrid />
+			<Header />
+			<Chempions />
 		</>
 	);
 }

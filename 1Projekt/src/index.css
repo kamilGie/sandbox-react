@@ -1,3 +1,8 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
 .ChampContainer {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, 260px);
