@@ -8,7 +8,7 @@ function ChempionInfoBox(props) {
 		width: "100%"
 	}
 	const BoxStyle = {
-		backgroundColor: "#f0eed3",
+		backgroundColor: "#c7b198",
 		height: "95%",
 		width: "95%",
 		borderRadius: "10%",
