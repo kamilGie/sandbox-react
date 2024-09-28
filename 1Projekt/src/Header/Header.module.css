@@ -6,6 +6,7 @@
 	margin: 0;
 	position: fixed;
 	top: 0;
+	left: 0;
 	display: flex;
 	align-items: center;
 }
@@ -14,5 +15,5 @@
 	color: white;
 	margin: 0;
 	font-family: Arial;
-	margin-left: 20p;
+	margin-left: 20px;
 }

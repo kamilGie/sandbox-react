@@ -1,16 +1,40 @@
-import propTypes from "prop-types"
+import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
+
 function ChempionInfoBox(props) {
-	const BoxStyle = {
-	}
+	const [InfoBoxText, setInfoBoxText] = useState("click the chempion to get time since last play");
+
+	useEffect(() => {
+		const calculateTimeDifference = () => {
+			if (props.selectedChempion !== 0) {
+				const lastPlayDate = new Date(props.selectedChempion);
+				const currentDate = new Date();
+				const timeDifference = currentDate - lastPlayDate;
+
+				const daysPast = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+				const hoursPast = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				const minutesPast = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+				const secondsPast = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+				setInfoBoxText(`${daysPast} days \n ${hoursPast}h ${minutesPast}m ${secondsPast}s`);
+			}
+		};
+		calculateTimeDifference();
+
+		const interval = setInterval(calculateTimeDifference, 1000);
+
+		return () => clearInterval(interval);
+	}, [props.selectedChempion]);
+
 	return (
 		<div className="ChempionInfoBox">
-			<div className="ChempionInfoNote" style={BoxStyle}>{props.selectedChempion}</div>
-		</div>)
+			<div className="ChempionInfoNote">{InfoBoxText}</div>
+		</div>
+	);
 }
 
 ChempionInfoBox.propTypes = {
-	selectedChempion: propTypes.number,
-}
+	selectedChempion: PropTypes.number.isRequired, // Przyjmujemy numer, a nie string
+};
 
-
-export default ChempionInfoBox
+export default ChempionInfoBox;
