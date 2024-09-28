@@ -1,0 +1,16 @@
+.Header {
+	background-color: #596e79;
+	height: 100px;
+	width: 100%;
+	box-sizing: border-box;
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+.Logo {
+	color: white;
+	margin: 0;
+	font-family: Arial;
+	margin-left: 20p;
+}

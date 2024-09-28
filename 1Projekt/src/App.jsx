@@ -1,11 +1,11 @@
-import Header from "./Header"
-import Chempions from "./Chempions";
+import Header from "./Header/Header.jsx"
+import MainContent from "./MainContent/MainContent.jsx";
 
 function App() {
 	return (
 		<>
 			<Header />
-			<Chempions />
+			<MainContent />
 		</>
 	);
 }

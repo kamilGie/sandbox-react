@@ -1,7 +1,7 @@
-import DariusPhoto from "./assets/Darius.webp"
-import TeemoPhoto from "./assets/teemo.avif"
-import YasuoPhoto from "./assets/yasuo.webp"
-import ChempionPhoto from "./assets/none.jpg"
+import DariusPhoto from "../assets/Darius.webp"
+import TeemoPhoto from "../assets/teemo.avif"
+import YasuoPhoto from "../assets/yasuo.webp"
+import ChempionPhoto from "../assets/none.jpg"
 
 class Chempion {
 	constructor(name, desc, img, id) {
