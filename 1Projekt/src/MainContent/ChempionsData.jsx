@@ -13,7 +13,7 @@ class Chempion {
 }
 
 export const ChempionList = [
-	new Chempion("Darius", "the Hand of Noxus", DariusPhoto, 121),
+	new Chempion("Darius", "the Hand of Noxus", DariusPhoto, 122),
 	new Chempion("Teemo", "the Swift Scout", TeemoPhoto, 17),
 	new Chempion("Yasuo", "the Unforgiven", YasuoPhoto, 157),
 	new Chempion("Ahri", "the Nine-Tailed Fox", ChempionPhoto, 103),
