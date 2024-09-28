@@ -17,7 +17,7 @@ function ChempionsGrid(props) {
 
 	return (
 		<div>
-			<input value={inputFilter.current} onChange={SetFilter} />
+			<input className="SearchFilter" value={inputFilter.current} onChange={SetFilter} />
 			<div className="ChampContainer">
 				{FilteredChampions.map(chemp => (
 					<Card key={chemp.id} name={chemp.name} desc={chemp.desc} img={chemp.img} func={props.func} id={chemp.id} />
