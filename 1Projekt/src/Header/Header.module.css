@@ -1,6 +1,6 @@
 .Header {
 	background-color: #596e79;
-	height: 100px;
+	height: 5rem;
 	width: 100%;
 	box-sizing: border-box;
 	margin: 0;
@@ -9,11 +9,64 @@
 	left: 0;
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 }
 
 .Logo {
 	color: white;
 	margin: 0;
 	font-family: Arial;
-	margin-left: 20px;
+	margin-left: 30px;
+}
+
+.SearchBars {
+	width: 60%;
+	display: flex;
+}
+
+.tagBar {
+	height: 40px;
+	flex: 1;
+	border: 2px solid #ccc;
+	border-radius: 20px;
+	font-size: 16px;
+	outline: none;
+	transition: all 0.3s ease;
+}
+
+.tagBar:focus {
+	border-color: #007bff;
+	box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+.tagBar::placeholder {
+	color: #888;
+	font-style: italic;
+}
+
+.nickBar {
+	height: 40px;
+	flex: 4;
+	margin-right: 10px;
+	border: 2px solid #ccc;
+	border-radius: 20px;
+	padding: 0 15px;
+	font-size: 16px;
+	outline: none;
+	transition: all 0.3s ease;
+}
+
+.nickBar:focus {
+	border-color: #007bff;
+	box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+.nickBar::placeholder {
+	color: #888;
+	font-style: italic;
+}
+
+
+.AccImg {
+	margin-right: 30px;
 }
