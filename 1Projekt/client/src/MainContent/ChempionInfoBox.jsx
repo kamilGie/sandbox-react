@@ -18,23 +18,28 @@ function ChempionInfoBox(props) {
 
 				setInfoBoxText(`${daysPast} days \n ${hoursPast}h ${minutesPast}m ${secondsPast}s`);
 			}
+			else {
+				setInfoBoxText("click the chempion to get time since last play");
+			}
 		};
 		calculateTimeDifference();
 
-		const interval = setInterval(calculateTimeDifference, 1000);
+		var interval = setInterval(calculateTimeDifference, 1000);
 
 		return () => clearInterval(interval);
 	}, [props.selectedChempion]);
 
+
 	return (
 		<div className="ChempionInfoBox">
-			<div className="ChempionInfoNote">{InfoBoxText}</div>
+			<div className="ChempionInfoNote"> <p className="nick">{props.userNick}</p> {InfoBoxText}</div>
 		</div>
 	);
 }
 
 ChempionInfoBox.propTypes = {
-	selectedChempion: PropTypes.number.isRequired, // Przyjmujemy numer, a nie string
+	selectedChempion: PropTypes.number.isRequired,
+	userNick: PropTypes.string
 };
 
 export default ChempionInfoBox;

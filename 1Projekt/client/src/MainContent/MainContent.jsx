@@ -15,11 +15,15 @@ function MainContent(props) {
 		if (props.user.nick === "") return;
 		const fetchPuuid = async () => {
 			try {
-				const url = `https://europe.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${props.user.nick}/${props.user.tag}`;
-				console.log(url);
-				const response = await axios.get(url, { headers: { 'X-Riot-Token': riotID } });
+				const response = await axios.get('http://localhost:3000/puuid', {
+					headers: {
+						'nick': props.user.nick,
+						'tag': props.user.tag,
+					}
+				})
 				console.log(response);
-				setpuuid(response.puuid)
+				setpuuid(response.data)
+				SetSelectedChampionID(0);
 			} catch (error) {
 				console.error('Błąd podczas pobierania danych API:', error);
 			}
@@ -31,7 +35,9 @@ function MainContent(props) {
 	useEffect(() => {
 		const fetchChampionData = async () => {
 			try {
-				const response = await axios.get(`https://eun1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/${puuid}/by-champion/${selectedChampionID}?api_key=${riotID}`);
+				const url = `https://eun1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/${puuid}/by-champion/${selectedChampionID}?api_key=${riotID}`
+				console.log(url)
+				const response = await axios.get(url);
 				setTimePast(response.data.lastPlayTime);
 			} catch (error) {
 				console.error('Błąd podczas pobierania danych API:', error);
@@ -49,7 +55,7 @@ function MainContent(props) {
 
 	return (<div className="MainContainer" >
 		<ChempionsGrid func={ChempionClick} />
-		<ChempionInfoBox selectedChempion={TimePast} />
+		<ChempionInfoBox selectedChempion={TimePast} userNick={props.user.nick} />
 	</div>)
 }
 

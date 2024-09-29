@@ -12,6 +12,7 @@ function ChempionsGrid(props) {
 	}, [inputFilter]);
 
 	function SetFilter(e) {
+
 		setInputFilter(e.target.value);
 	}
 

@@ -1,10 +1,11 @@
 import styles from "./Header.module.css"
+import PropTypes from "prop-types"
 import acc from "../assets/acc.svg"
 import { useState } from "react";
 
 function Header(props) {
 	const [tag, setTag] = useState("eune")
-	const [nick, setNick] = useState("nick")
+	const [nick, setNick] = useState("Faker")
 	function SubmitUser() {
 		console.log("Submiting user")
 		props.user({ nick: nick, tag: tag })
@@ -23,6 +24,10 @@ function Header(props) {
 			</img>
 		</div>
 	);
+}
+
+Header.propTypes = {
+	user: PropTypes.object,
 }
 
 export default Header
