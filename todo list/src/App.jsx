@@ -10,14 +10,16 @@ function App() {
   const AddNewTD = (newToDo) => {
     SetTDList((prevTDList) => [...prevTDList, newToDo]);
   };
+
   return (
-    <>
-      <main className="main">
+    <div className="container">
+      <main>
         <Head />
         <ToDoList>{TDList}</ToDoList>
         <InputArea AddToDo={AddNewTD} />
       </main>
-    </>
+      <h1 className="Title">TO DO LIST</h1>
+    </div>
   );
 }
 
